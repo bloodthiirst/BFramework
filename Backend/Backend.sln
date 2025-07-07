@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer", "WebServer\WebServer.csproj", "{3D8EE3B5-A6B3-428C-8AC9-1498778A009A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "REST API", "REST API\REST API.csproj", "{1F262EA8-4D58-4D35-80F9-0251DDBB37F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D8EE3B5-A6B3-428C-8AC9-1498778A009A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8EE3B5-A6B3-428C-8AC9-1498778A009A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8EE3B5-A6B3-428C-8AC9-1498778A009A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8EE3B5-A6B3-428C-8AC9-1498778A009A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F262EA8-4D58-4D35-80F9-0251DDBB37F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F262EA8-4D58-4D35-80F9-0251DDBB37F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F262EA8-4D58-4D35-80F9-0251DDBB37F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F262EA8-4D58-4D35-80F9-0251DDBB37F0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBD9DBB7-4AA8-48A5-BC89-433B6B14F6AD}
+	EndGlobalSection
+EndGlobal

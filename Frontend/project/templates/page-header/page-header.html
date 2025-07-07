@@ -1,0 +1,112 @@
+<header class="bg-transparent">
+
+  <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+    <a class="block" href="/">
+      <span class="sr-only">Home</span>
+      <img class="w-16" src="res/PixelEyesLogo_128px.png">
+    </a>
+
+    <div class="flex flex-1 items-center justify-end mx-auto">
+      <nav aria-label="Global" class="md:grow-1 hidden md:block">
+        <ul class="flex items-center justify-evenly gap-6 text-sm">
+          <li>
+            <a class="text-gray-500 transition hover:text-gray-500/75" href="/blogs"> Blogs </a>
+          </li>
+
+          <li>
+            <a class="text-gray-500 transition hover:text-gray-500/75" href="/contact"> Contact </a>
+          </li>
+
+          <li>
+            <a class="text-gray-500 transition hover:text-gray-500/75" href="about"> About </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-4 grow-1 md:grow-0">
+        <div class="flex gap-4 grow-1 justify-center">
+          <a class="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
+            href="#">
+            Login
+          </a>
+
+          <a class="block rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75"
+            href="#">
+            Register
+          </a>
+        </div>
+
+        <button id="menu-button" data-toggle="false"
+          class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75  md:hidden">
+          <span class="sr-only">Toggle menu</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="header-dropdown" class="md:hidden w-full overflow-hidden transition-all duration-300 ease-in-out h-0">
+    <nav aria-label="Global" class="md:grow-1 h-full md:block">
+      <il class="flex flex-col h-full items-center justify-around text-sm">
+        <li>
+          <a class="text-gray-500 dropdown-li  transition hover:text-gray-500/75" href="/blogs"> Blogs </a>
+        </li>
+
+        <li>
+          <a class="text-gray-500 transition dropdown-li hover:text-gray-500/75" href="/contact"> Contact </a>
+        </li>
+
+        <li>
+          <a class="text-gray-500 transition dropdown-li hover:text-gray-500/75" href="/about"> About </a>
+        </li>
+
+      </il>
+    </nav>
+  </div>
+
+  <script>
+
+    function ToggleDropdown()
+    {
+      let currVal = btn.getAttribute("data-toggle");
+      let newVal = currVal == "true" ? "false" : "true";
+
+      let classTrue = 'h-32';
+      let classFalse = 'h-0';
+      
+      if(newVal == "true")
+      {
+        dropdown.classList.remove(classFalse);
+        dropdown.classList.add(classTrue);
+      }
+      else
+      {
+        dropdown.classList.remove(classTrue);
+        dropdown.classList.add(classFalse);
+      }
+      
+      btn.setAttribute("data-toggle" , newVal);
+    };
+
+    let btn = document.getElementById("menu-button");
+    let dropdown = document.getElementById('header-dropdown');
+    let liElems = document.getElementsByClassName('dropdown-li');
+
+    for(let element of liElems) {
+        element.onclick = (e) => {
+          ToggleDropdown();
+        }
+    };
+
+    btn.onclick = (e) => 
+    {
+      ToggleDropdown();
+    }
+
+  </script>
+</header>
